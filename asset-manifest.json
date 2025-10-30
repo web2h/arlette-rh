@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.fd4bf419.css",
-    "main.js": "/static/js/main.3bd7e38a.js",
+    "main.css": "/static/css/main.6e6c1e0f.css",
+    "main.js": "/static/js/main.0d3707a8.js",
     "static/js/453.8ec1e713.chunk.js": "/static/js/453.8ec1e713.chunk.js",
     "static/media/portrait.png": "/static/media/portrait.69af9957dde578c441b4.png",
+    "static/media/logo.png": "/static/media/logo.7d70cbd905c5a8c028a8.png",
+    "static/media/hatton-regular.ttf": "/static/media/hatton-regular.09067debf2d478ab31ae.ttf",
     "static/media/Nickainley-Normal.otf": "/static/media/Nickainley-Normal.4484295cc8d72807de8a.otf",
     "index.html": "/index.html",
-    "main.fd4bf419.css.map": "/static/css/main.fd4bf419.css.map",
-    "main.3bd7e38a.js.map": "/static/js/main.3bd7e38a.js.map",
+    "main.6e6c1e0f.css.map": "/static/css/main.6e6c1e0f.css.map",
+    "main.0d3707a8.js.map": "/static/js/main.0d3707a8.js.map",
     "453.8ec1e713.chunk.js.map": "/static/js/453.8ec1e713.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd4bf419.css",
-    "static/js/main.3bd7e38a.js"
+    "static/css/main.6e6c1e0f.css",
+    "static/js/main.0d3707a8.js"
   ]
 }

@@ -1,20 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.dee0c79c.css",
-    "main.js": "/static/js/main.f8ce4957.js",
+    "main.css": "/static/css/main.71a6585a.css",
+    "main.js": "/static/js/main.79659b5d.js",
     "static/js/453.8ec1e713.chunk.js": "/static/js/453.8ec1e713.chunk.js",
+    "static/media/IMG_3620.jpg": "/static/media/IMG_3620.09d62f18ffcfb3b1b074.jpg",
     "static/media/portrait.png": "/static/media/portrait.69af9957dde578c441b4.png",
     "static/media/logo.png": "/static/media/logo.7d70cbd905c5a8c028a8.png",
-    "static/media/who-am-i.jpg": "/static/media/who-am-i.0528053b13e83c0f369d.jpg",
+    "static/media/who-am-i-2.png": "/static/media/who-am-i-2.850d772f41e2c25ed5a6.png",
     "static/media/hatton-regular.ttf": "/static/media/hatton-regular.09067debf2d478ab31ae.ttf",
     "static/media/Nickainley-Normal.otf": "/static/media/Nickainley-Normal.4484295cc8d72807de8a.otf",
+    "static/media/HolidayFree.otf": "/static/media/HolidayFree.67d798cd75bb80f8f116.otf",
+    "static/media/Calgary_DEMO.ttf": "/static/media/Calgary_DEMO.b45a202cd416223acd64.ttf",
     "index.html": "/index.html",
-    "main.dee0c79c.css.map": "/static/css/main.dee0c79c.css.map",
-    "main.f8ce4957.js.map": "/static/js/main.f8ce4957.js.map",
+    "main.71a6585a.css.map": "/static/css/main.71a6585a.css.map",
+    "main.79659b5d.js.map": "/static/js/main.79659b5d.js.map",
     "453.8ec1e713.chunk.js.map": "/static/js/453.8ec1e713.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dee0c79c.css",
-    "static/js/main.f8ce4957.js"
+    "static/css/main.71a6585a.css",
+    "static/js/main.79659b5d.js"
   ]
 }

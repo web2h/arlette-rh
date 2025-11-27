@@ -103,7 +103,7 @@ function App() {
 
             <div class="benefit">
               <div class="benefit-bullet">•</div>
-              <div class="benefit-text">Stratégie attraction talentée</div>
+              <div class="benefit-text">Stratégie d'attraction de talents</div>
             </div>
 
             <div class="benefit">
@@ -139,7 +139,7 @@ function App() {
 
             <div class="benefit">
               <div class="benefit-bullet">•</div>
-              <div class="benefit-text">Coaching entretiens</div>
+              <div class="benefit-text">Coaching entrevues</div>
             </div>
 
             <div class="benefit">
@@ -185,6 +185,61 @@ function App() {
           </div>
         </div>
       </section>
+
+      <section className="my-services">
+        <p className="title">Mes Services</p>
+
+        <div className="services-grid">
+          <div className="service-card">
+            <img src={require('./images/mes-services-cv.png')} alt="Service rédaction CV TI" className="service-image" />
+            <div className="service-content">
+              <h3 className="service-title">Rédaction CV TI</h3>
+              <ul className="service-list">
+                <li>Adaptation professionelle</li>
+                <li>Optimisation LinkedIn</li>
+                <li>Coaching entretiens</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="service-card">
+            <img src={require('./images/mes-services-attraction.png')} alt="Service attraction" className="service-image" />
+            <div className="service-content">
+              <h3 className="service-title">Attraction de talents TI</h3>
+              <ul className="service-list">
+                <li>Accompagnement professionnel</li>
+                <li>Packages couples</li>
+                <li>Recherche de stages</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="service-card">
+            <img src={require('./images/mes-services-marketing.png')} alt="Service marketing" className="service-image" />
+            <div className="service-content">
+              <h3 className="service-title">Marketing RH PME</h3>
+              <ul className="service-list">
+                <li>Audit marque employeur</li>
+                <li>tratégies d'attraction</li>
+                <li>Contenu employeur</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="service-card">
+            <img src={require('./images/mes-services-media.png')} alt="Service médias sociaux" className="service-image" />
+            <div className="service-content">
+              <h3 className="service-title">Médias Sociaux</h3>
+              <ul className="service-list">
+                <li>Gestion LinkedIn entreprise</li>
+                <li>Présence digitale employeur</li>
+                <li>Gestion de médias sociaux</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <main className="main">
         <section id="about">
           <h2>About Us</h2>

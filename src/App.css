@@ -325,6 +325,94 @@
   font-weight: bold;
 }
 
+.my-services {
+  background: #eeecea;
+  min-height: 100vh;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.my-services .title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ba3073;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.service-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.service-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ba3073;
+  margin: 0 0 1rem 0;
+  text-align: left;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-list li {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.1rem;
+  color: #555555;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.service-list li::before {
+  content: "•";
+  color: #ba3073;
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: -3px;
+}
+
 .main {
   flex: 1;
   padding: 2rem 1rem;

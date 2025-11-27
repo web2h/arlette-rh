@@ -88,34 +88,102 @@ function App() {
         </div>
       </section>
       <section className="why">
-        <p className="title">Pourquoi choisir Arlette RH Solutions?</p>
+        <h1>Pourquoi choisir Arlette RH Solutions?</h1>
 
-        <table className="why-table">
-          <thead>
-            <tr>
-              <th>Expérience vécue</th>
-              <th>Expertise TI reconnue</th>
-              <th>Approche 360°</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>J'ai vécu l'immigration et l'intégration professionnelle</td>
-              <td>4 ans d'expérience en recrutement technologique</td>
-              <td>Services complémentaires intégrés</td>
-            </tr>
-            <tr>
-              <td>Je comprends vos défis car je les ai surmontés</td>
-              <td>Spécialisation secteur TI</td>
-              <td>Du CV à l'intégration complète</td>
-            </tr>
-            <tr>
-              <td>Mon conjoint aussi recruté en TI de l'étranger </td>
-              <td>Réseau établi d'entreprises québécoises</td>
-              <td>Accompagnement humain personnalisé</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="three-columns">
+          <div class="column">
+            <div class="icon">🎯</div>
+            <h2>PME québécoises</h2>
+            <div class="subtitle">Marketing RH</div>
+
+            <div class="benefit">
+              <div class="benefit-bullet">•</div>
+              <div class="benefit-text">Audit image employeur</div>
+            </div>
+
+            <div class="benefit">
+              <div class="benefit-bullet">•</div>
+              <div class="benefit-text">Stratégie attraction talentée</div>
+            </div>
+
+            <div class="benefit">
+              <div class="benefit-bullet">•</div>
+              <div class="benefit-text">Contenu RH optimisé</div>
+            </div>
+
+            <div class="benefit">
+              <div class="benefit-bullet">•</div>
+              <div class="benefit-text">Accompagnement recrutement</div>
+            </div>
+
+            <div class="proof-box">
+              <div class="proof-title">Expertise</div>
+              <div class="proof-text">4 ans recrutement TI. Marché québécois maîtrisé.</div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="icon">💼</div>
+            <h2>Professionnels TI</h2>
+            <div class="subtitle">Intégration Professionnelle</div>
+
+            <div class="benefit">
+              <div class="benefit-bullet">•</div>
+              <div class="benefit-text">CV format québécois + ATS</div>
+            </div>
+
+            <div class="benefit">
+              <div class="benefit-bullet">•</div>
+              <div class="benefit-text">Profil LinkedIn optimisé</div>
+            </div>
+
+            <div class="benefit">
+              <div class="benefit-bullet">•</div>
+              <div class="benefit-text">Coaching entretiens</div>
+            </div>
+
+            <div class="benefit">
+              <div class="benefit-bullet">•</div>
+              <div class="benefit-text">Mise en relation entreprises</div>
+            </div>
+
+            <div class="proof-box">
+              <div class="proof-title">Avantage</div>
+              <div class="proof-text">J'ai vécu l'immigration et comprends vos défis.</div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="icon">🌐</div>
+            <h2>Approche 360°</h2>
+            <div class="subtitle">Solution Complète</div>
+
+            <div class="benefit">
+              <div class="benefit-bullet">•</div>
+              <div class="benefit-text">Services intégrés</div>
+            </div>
+
+            <div class="benefit">
+              <div class="benefit-bullet">•</div>
+              <div class="benefit-text">CV à intégration</div>
+            </div>
+
+            <div class="benefit">
+              <div class="benefit-bullet">•</div>
+              <div class="benefit-text">Gestion médias sociaux</div>
+            </div>
+
+            <div class="benefit">
+              <div class="benefit-bullet">•</div>
+              <div class="benefit-text">Support personnalisé</div>
+            </div>
+
+            <div class="proof-box">
+              <div class="proof-title">Différence</div>
+              <div class="proof-text">Solution clé en main. Parlons de vos besoins.</div>
+            </div>
+          </div>
+        </div>
       </section>
       <main className="main">
         <section id="about">

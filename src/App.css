@@ -151,21 +151,21 @@
 
 .who-am-i .first-name {
   padding: 0;
-  margin:0;
+  margin: 0;
   font-family: "Mea Culpa", cursive;
- width: 100%;
- font-size: 7rem;
- text-align: center;
+  width: 100%;
+  font-size: 7rem;
+  text-align: center;
 }
 
 .who-am-i .last-name {
   padding: 0;
-  margin:0;
+  margin: 0;
   margin-bottom: 200px;
   font-family: "Mea Culpa", cursive;
- width: 100%;
- font-size: 8rem;
- text-align: center;
+  width: 100%;
+  font-size: 8rem;
+  text-align: center;
 }
 
 .arlette-photo {
@@ -173,6 +173,116 @@
   height: auto;
   object-fit: cover;
 }
+
+.why {
+  h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin-bottom: 50px;
+    font-weight: 700;
+  }
+
+  .three-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 35px;
+  }
+
+  .column {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+
+  }
+
+  .column h2 {
+    font-size: 1.3rem;
+    color: #d41b75;
+    margin-bottom: 5px;
+    font-weight: 700;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+  }
+
+  .icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+
+  .benefit {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+    align-items: flex-start;
+  }
+
+  .benefit-bullet {
+    color: #d41b75;
+    font-weight: 700;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: -3px;
+  }
+
+  .benefit-text {
+    color: #1a1a1a;
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .proof-box {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 25px;
+  }
+
+  .proof-title {
+    font-size: 0.9rem;
+    color: #d41b75;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+
+  .proof-text {
+    font-size: 1rem;
+    color: #1a1a1a;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 1024px) {
+    .three-columns {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .three-columns {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+    }
+
+    .container {
+      padding: 40px 20px;
+    }
+  }
+}
+
+
+
 
 .why {
   background: #ba3073;

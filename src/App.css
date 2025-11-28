@@ -174,6 +174,16 @@
   object-fit: cover;
 }
 
+@media (max-width: 640px) {
+  .who-am-i {
+    grid-template-columns: 1fr;
+  }
+
+  .who-am-i>div:nth-child(2) {
+    display: none;
+  }
+}
+
 .why {
   h1 {
     text-align: center;
@@ -193,7 +203,8 @@
     padding: 20px;
     background-color: #ffffff;
     border-radius: 10px;
-
+    display: flex;
+    flex-direction: column;
   }
 
   .column h2 {
@@ -214,6 +225,31 @@
   .icon {
     font-size: 2.5rem;
     margin-bottom: 15px;
+  }
+
+  .popup-image {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+  }
+
+  .popup-image img {
+    max-width: 85vw;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    display: block;
   }
 
   .benefit {
@@ -237,11 +273,27 @@
     line-height: 1.5;
   }
 
+  .persona-citation {
+    font-style: italic;
+    font-weight: bold;
+    color: #d41b75;
+    font-size: 1.1rem;
+    margin: 20px 0;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .persona-citation:hover .popup-image {
+    display: block;
+  }
+
   .proof-box {
     background: #f5f5f5;
     padding: 15px;
     border-radius: 6px;
-    margin-top: 25px;
+    margin-top: auto;
   }
 
   .proof-title {
@@ -411,6 +463,40 @@
   font-size: 1.2rem;
   flex-shrink: 0;
   margin-top: -3px;
+}
+
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .service-card {
+    position: relative;
+    padding: 1rem;
+  }
+
+  .service-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .service-content {
+    position: relative;
+    z-index: 2;
+    margin-top: 180px;
+  }
 }
 
 .main {

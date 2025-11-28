@@ -67,7 +67,7 @@ function App() {
             2026 : Certificat Relations industrielles (UdeM) – prévu
             <br />
             <br />
-            Je m’engage à vous accompagner avec la même attention, le même dévouement et la même passion que j’aurais aimé recevoir lors de mon arrivée au Québec !
+            Je m'engage à vous offrir un accompagnement rigoureux et passionné. Mon expertise du marché québécois et ma compréhension authentique de vos défis font toute la différence.
           </p>
 
           <p className="title">Mes valeurs</p>
@@ -116,6 +116,13 @@ function App() {
               <div class="benefit-text">Accompagnement recrutement</div>
             </div>
 
+            <div class="persona-citation">
+              Comme Sophie, vous gérez le recrutement et votre marque employeur.<br /><br />Vous souhaitez développer votre marketing RH?
+              <div class="popup-image">
+                <img src={require('./images/persona-pme.png')} alt="Persona PME" />
+              </div>
+            </div>
+
             <div class="proof-box">
               <div class="proof-title">Expertise</div>
               <div class="proof-text">4 ans recrutement TI. Marché québécois maîtrisé.</div>
@@ -145,6 +152,13 @@ function App() {
             <div class="benefit">
               <div class="benefit-bullet">•</div>
               <div class="benefit-text">Mise en relation entreprises</div>
+            </div>
+
+            <div class="persona-citation">
+              Comme Marc, vous souhaitez augmenter votre attractivité sur le marché TI?
+              <div class="popup-image">
+                <img src={require('./images/persona-consultant.png')} alt="Persona Consultant" />
+              </div>
             </div>
 
             <div class="proof-box">
@@ -220,7 +234,7 @@ function App() {
               <h3 className="service-title">Marketing RH PME</h3>
               <ul className="service-list">
                 <li>Audit marque employeur</li>
-                <li>tratégies d'attraction</li>
+                <li>Stratégies d'attraction</li>
                 <li>Contenu employeur</li>
               </ul>
             </div>

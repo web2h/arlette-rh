@@ -39,6 +39,18 @@ function App() {
           <p className="welcome-citation-2">Révolutionnons ensemble votre attractivité et votre marque employeur!</p>
         </div>
 
+        <div className="video-container">
+          <iframe
+            width="100%"
+            height="338"
+            src="https://www.youtube.com/embed/4C04vCrwd2A"
+            title="L'attraction RH par Arlette RH Solutions"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+
         <button className="soumission-btn soumission-btn-fixed">Consultation gratuite 30 min</button>
 
       </header>
@@ -250,6 +262,113 @@ function App() {
                 <li>Gestion de médias sociaux</li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="cv-formulas">
+        <h2>Formules CV</h2>
+        <div className="formulas-table-container">
+          <table className="formulas-table">
+            <thead>
+              <tr>
+                <th>Services</th>
+                <th>EXPRESS<br /><span className="formula-duration">Durée: 3 jours</span></th>
+                <th>COMPLÈTE<br /><span className="formula-duration">Durée: 5 jours</span></th>
+                <th>PREMIUM<br /><span className="formula-duration">Durée: 7 jours</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Révision et restructuration de votre CV existant</td>
+                <td className="check">✓</td>
+                <td className="check">✓</td>
+                <td className="check">✓</td>
+              </tr>
+              <tr>
+                <td>Optimisation avec mots-clés sectoriels</td>
+                <td className="check">✓</td>
+                <td className="check">✓</td>
+                <td className="check">✓</td>
+              </tr>
+              <tr>
+                <td>Mise en page professionnelle québécoise</td>
+                <td className="check">✓</td>
+                <td className="check">✓</td>
+                <td className="check">✓</td>
+              </tr>
+              <tr>
+                <td>1 version finale (PDF + Word)</td>
+                <td className="check">✓</td>
+                <td className="check">✓</td>
+                <td className="check">✓</td>
+              </tr>
+              <tr>
+                <td>Entretien découverte personnalisé</td>
+                <td className="no-check">-</td>
+                <td className="check">✓</td>
+                <td className="check">✓</td>
+              </tr>
+              <tr>
+                <td>Réécriture complète du CV</td>
+                <td className="no-check">-</td>
+                <td className="check">✓</td>
+                <td className="check">✓</td>
+              </tr>
+              <tr>
+                <td>Lettre de présentation québécoise</td>
+                <td className="no-check">-</td>
+                <td className="check">✓</td>
+                <td className="check">✓</td>
+              </tr>
+              <tr>
+                <td>Optimisation LinkedIn (titre + résumé)</td>
+                <td className="no-check">-</td>
+                <td className="check">✓</td>
+                <td className="check">✓</td>
+              </tr>
+              <tr>
+                <td>Guide "Postuler au Québec" inclus</td>
+                <td className="no-check">-</td>
+                <td className="check">✓</td>
+                <td className="check">✓</td>
+              </tr>
+              <tr>
+                <td>Entretien approfondi supplémentaire</td>
+                <td className="no-check">-</td>
+                <td className="no-check">-</td>
+                <td className="check">✓</td>
+              </tr>
+              <tr>
+                <td>CV bilingue (français + anglais)</td>
+                <td className="no-check">-</td>
+                <td className="no-check">-</td>
+                <td className="check">✓</td>
+              </tr>
+              <tr>
+                <td>2 lettres de motivation personnalisées</td>
+                <td className="no-check">-</td>
+                <td className="no-check">-</td>
+                <td className="check">✓</td>
+              </tr>
+              <tr>
+                <td>Coaching entretien d'une heure</td>
+                <td className="no-check">-</td>
+                <td className="no-check">-</td>
+                <td className="check">✓</td>
+              </tr>
+              <tr>
+                <td>Support 30 jours post-livraison</td>
+                <td className="no-check">-</td>
+                <td className="no-check">-</td>
+                <td className="check">✓</td>
+              </tr>
+            </tbody>
+          </table>
+          <div className="formulas-notes">
+            <p><strong>EXPRESS :</strong> CV déjà bien structuré nécessitant adaptation</p>
+            <p><strong>COMPLÈTE :</strong> Refonte complète pour le marché québécois</p>
+            <p><strong>PREMIUM :</strong> Professionnels seniors, postes spécialisés</p>
           </div>
         </div>
       </section>

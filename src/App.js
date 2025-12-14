@@ -4,6 +4,16 @@ import './App.css';
 
 function App() {
   const [navOpen, setNavOpen] = useState(false);
+  const [activeServiceTab, setActiveServiceTab] = useState('cv');
+  const [fullscreenImage, setFullscreenImage] = useState(null);
+
+  const openFullscreen = (imageSrc) => {
+    setFullscreenImage(imageSrc);
+  };
+
+  const closeFullscreen = () => {
+    setFullscreenImage(null);
+  };
 
   return (
     <div className="App">
@@ -23,6 +33,7 @@ function App() {
           <nav className={`nav nav-top${navOpen ? ' nav-open' : ''}`}>
             <a href="#about" onClick={() => setNavOpen(false)}>A propos</a>
             <a href="#services" onClick={() => setNavOpen(false)}>Mes services</a>
+            <a href="#portfolio" onClick={() => setNavOpen(false)}>Mes réalisations</a>
             <a href="#contact" onClick={() => setNavOpen(false)}>Contact</a>
           </nav>
         </div>
@@ -54,7 +65,7 @@ function App() {
         <button className="soumission-btn soumission-btn-fixed">Consultation gratuite 30 min</button>
 
       </header>
-      <section className="who-am-i">
+      <section className="who-am-i" id="about">
 
         <div>
           <p className="title">Pourquoi me faire confiance?</p>
@@ -99,7 +110,7 @@ function App() {
           <img src={require('./images/who-am-i.jpg')} alt="Arlette" className="arlette-photo" />
         </div>
       </section>
-      <section className="why">
+      <section className="why" id="services">
         <h1>Pourquoi choisir Arlette RH Solutions?</h1>
 
         <div class="three-columns">
@@ -266,133 +277,537 @@ function App() {
         </div>
       </section>
 
-      <section className="cv-formulas">
-        <h2>Formules CV</h2>
+      <section className="my-formulas">
+        <h2>Mes services et formules</h2>
+
+        <div className="service-tabs">
+          <button
+            className={`service-tab ${activeServiceTab === 'cv' ? 'active' : ''}`}
+            onClick={() => setActiveServiceTab('cv')}
+          >
+            Rédaction CV
+          </button>
+          <button
+            className={`service-tab ${activeServiceTab === 'marketing' ? 'active' : ''}`}
+            onClick={() => setActiveServiceTab('marketing')}
+          >
+            Marketing RH Simplifié pour PME
+          </button>
+          <button
+            className={`service-tab ${activeServiceTab === 'attraction' ? 'active' : ''}`}
+            onClick={() => setActiveServiceTab('attraction')}
+          >
+            Attraction de talents professionnels
+          </button>
+          <button
+            className={`service-tab ${activeServiceTab === 'medias' ? 'active' : ''}`}
+            onClick={() => setActiveServiceTab('medias')}
+          >
+            Gestion médias sociaux simplifiée pour PME
+          </button>
+        </div>
+
         <div className="formulas-table-container">
-          <table className="formulas-table">
-            <thead>
-              <tr>
-                <th>Services</th>
-                <th>EXPRESS<br /><span className="formula-duration">Durée: 3 jours</span></th>
-                <th>COMPLÈTE<br /><span className="formula-duration">Durée: 5 jours</span></th>
-                <th>PREMIUM<br /><span className="formula-duration">Durée: 7 jours</span></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Révision et restructuration de votre CV existant</td>
-                <td className="check">✓</td>
-                <td className="check">✓</td>
-                <td className="check">✓</td>
-              </tr>
-              <tr>
-                <td>Optimisation avec mots-clés sectoriels</td>
-                <td className="check">✓</td>
-                <td className="check">✓</td>
-                <td className="check">✓</td>
-              </tr>
-              <tr>
-                <td>Mise en page professionnelle québécoise</td>
-                <td className="check">✓</td>
-                <td className="check">✓</td>
-                <td className="check">✓</td>
-              </tr>
-              <tr>
-                <td>1 version finale (PDF + Word)</td>
-                <td className="check">✓</td>
-                <td className="check">✓</td>
-                <td className="check">✓</td>
-              </tr>
-              <tr>
-                <td>Entretien découverte personnalisé</td>
-                <td className="no-check">-</td>
-                <td className="check">✓</td>
-                <td className="check">✓</td>
-              </tr>
-              <tr>
-                <td>Réécriture complète du CV</td>
-                <td className="no-check">-</td>
-                <td className="check">✓</td>
-                <td className="check">✓</td>
-              </tr>
-              <tr>
-                <td>Lettre de présentation québécoise</td>
-                <td className="no-check">-</td>
-                <td className="check">✓</td>
-                <td className="check">✓</td>
-              </tr>
-              <tr>
-                <td>Optimisation LinkedIn (titre + résumé)</td>
-                <td className="no-check">-</td>
-                <td className="check">✓</td>
-                <td className="check">✓</td>
-              </tr>
-              <tr>
-                <td>Guide "Postuler au Québec" inclus</td>
-                <td className="no-check">-</td>
-                <td className="check">✓</td>
-                <td className="check">✓</td>
-              </tr>
-              <tr>
-                <td>Entretien approfondi supplémentaire</td>
-                <td className="no-check">-</td>
-                <td className="no-check">-</td>
-                <td className="check">✓</td>
-              </tr>
-              <tr>
-                <td>CV bilingue (français + anglais)</td>
-                <td className="no-check">-</td>
-                <td className="no-check">-</td>
-                <td className="check">✓</td>
-              </tr>
-              <tr>
-                <td>2 lettres de motivation personnalisées</td>
-                <td className="no-check">-</td>
-                <td className="no-check">-</td>
-                <td className="check">✓</td>
-              </tr>
-              <tr>
-                <td>Coaching entretien d'une heure</td>
-                <td className="no-check">-</td>
-                <td className="no-check">-</td>
-                <td className="check">✓</td>
-              </tr>
-              <tr>
-                <td>Support 30 jours post-livraison</td>
-                <td className="no-check">-</td>
-                <td className="no-check">-</td>
-                <td className="check">✓</td>
-              </tr>
-            </tbody>
-          </table>
-          <div className="formulas-notes">
-            <p><strong>EXPRESS :</strong> CV déjà bien structuré nécessitant adaptation</p>
-            <p><strong>COMPLÈTE :</strong> Refonte complète pour le marché québécois</p>
-            <p><strong>PREMIUM :</strong> Professionnels seniors, postes spécialisés</p>
-          </div>
+          {activeServiceTab === 'cv' && (
+            <>
+              <table className="formulas-table">
+                <thead>
+                  <tr>
+                    <th>Services</th>
+                    <th>EXPRESS<br /><span className="formula-duration">Durée: 3 jours</span></th>
+                    <th>COMPLÈTE<br /><span className="formula-duration">Durée: 5 jours</span></th>
+                    <th>PREMIUM<br /><span className="formula-duration">Durée: 7 jours</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Révision et restructuration de votre CV existant</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>Optimisation avec mots-clés sectoriels</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>Mise en page professionnelle québécoise</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>1 version finale (PDF + Word)</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>Entretien découverte personnalisé</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>Réécriture complète du CV</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>Lettre de présentation québécoise</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>Optimisation LinkedIn (titre + résumé)</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>Guide "Postuler au Québec" inclus</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>Entretien approfondi supplémentaire</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>CV bilingue (français + anglais)</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>2 lettres de motivation personnalisées</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>Coaching entretien d'une heure</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>Support 30 jours post-livraison</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div className="formulas-notes">
+                <p><strong>EXPRESS :</strong> CV déjà bien structuré nécessitant adaptation</p>
+                <p><strong>COMPLÈTE :</strong> Refonte complète pour le marché québécois</p>
+                <p><strong>PREMIUM :</strong> Professionnels seniors, postes spécialisés</p>
+              </div>
+            </>
+          )}
+
+          {activeServiceTab === 'marketing' && (
+            <>
+              <table className="formulas-table">
+                <thead>
+                  <tr>
+                    <th>Services</th>
+                    <th>AUDIT DE PRÉSENCE<br /><span className="formula-duration">Durée: 2 semaines</span></th>
+                    <th>STRATÉGIE CIBLÉE<br /><span className="formula-duration">Durée: 3 semaines</span></th>
+                    <th>CRÉATION CONTENU<br /><span className="formula-duration">Durée: 1 semaine</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Analyse section "Carrières"</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>Audit LinkedIn entreprise et réseaux sociaux</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>Comparaison avec 3 entreprises concurrentes</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>Rapport détaillé avec recommandations (15 pages)</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>Rencontre de présentation des résultats</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>Analyse approfondie du poste et candidat idéal</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>Rédaction de 3 annonces d'emploi optimisées</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>Stratégie de diffusion multi-plateformes</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>Templates d'approche candidats</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>Guide d'entretiens avec questions clés</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>Plan d'action détaillé sur 3 mois</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>2 sessions de suivi personnalisées</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>5 publications LinkedIn prêtes à publier</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>3 modèles d'annonces d'emploi attractives</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>1 template de page carrières optimisé</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>Guide de publication avec hashtags sectoriels</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div className="formulas-notes">
+                <p><strong>AUDIT DE PRÉSENCE :</strong> PME voulant comprendre leur image sans grand budget</p>
+                <p><strong>STRATÉGIE CIBLÉE :</strong> Entreprises avec un poste difficile à combler</p>
+                <p><strong>CRÉATION CONTENU :</strong> Entreprises voulant améliorer leur contenu rapidement</p>
+              </div>
+            </>
+          )}
+
+          {activeServiceTab === 'attraction' && (
+            <>
+              <table className="formulas-table">
+                <thead>
+                  <tr>
+                    <th>Services</th>
+                    <th>CONSULTANT TI</th>
+                    <th>PACKAGE COUPLE TI</th>
+                    <th>COUPLE MIXTE</th>
+                    <th>STAGE/RECONVERSION</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Entretien découverte approfondi (1.5h)</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>Évaluation profil technique et soft skills (2h)</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>Optimisation CV format québécois (2h)</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>Révision profil LinkedIn pour marché québécois (1.5h)</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>Coaching spécifique entretiens TI au Québec (1h)</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>Conseils pratiques d'intégration professionnelle (1h)</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>Mise en relation avec 2-3 entreprises (1h)</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>Suivi post-placement pendant 1 mois (1h)</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>Conseils d'intégration familiale au Québec (2h)</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>Stratégie coordonnée de recherche d'emploi (2h)</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>Accompagnement démarches administratives (2h)</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>Réseau de contacts personnalisé selon vos profils</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>CV et conseils adaptés pour le conjoint non-TI (4h)</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div className="formulas-notes">
+                <p><strong>CONSULTANT TI :</strong> Mon expertise basée sur mon vécu d'immigration. J'ai vécu cette expérience + mon conjoint recruté de l'étranger</p>
+                <p><strong>PACKAGE COUPLE TI :</strong> Spécialement conçu pour couples de professionnels TI. Plus économique que 2 forfaits individuels</p>
+                <p><strong>COUPLE MIXTE :</strong> Pour couples où un seul conjoint est en TI. Parfait pour profils professionnels différents</p>
+                <p><strong>STAGE/RECONVERSION :</strong> Consultants TI juniors, nouveaux diplômés, personnes en reconversion</p>
+              </div>
+            </>
+          )}
+
+          {activeServiceTab === 'medias' && (
+            <>
+              <table className="formulas-table">
+                <thead>
+                  <tr>
+                    <th>Services</th>
+                    <th>CONFIGURATION<br /><span className="formula-duration">Total: 6h</span></th>
+                    <th>GESTION BASIQUE<br /><span className="formula-duration">8h/mois</span></th>
+                    <th>GESTION COMPLÈTE<br /><span className="formula-duration">15h/mois</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Création/optimisation page LinkedIn (2h)</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>Rédaction complète contenu page LinkedIn entreprise (2h)</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>Création visuels professionnels (1h)</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>Guide de bonnes pratiques (1h)</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>8 publications LinkedIn/mois (4h)</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>Réponse commentaires et messages (2h)</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>Rapport mensuel simple (1h)</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>1 consultation stratégique/mois (1h)</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                    <td className="no-check">-</td>
+                  </tr>
+                  <tr>
+                    <td>12 publications LinkedIn + Facebook/mois (6h)</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>4 stories/posts spontanés (2h)</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>Community management actif (4h)</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>1 campagne publicitaire simple/mois (2h)</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                  </tr>
+                  <tr>
+                    <td>Rapport détaillé + recommandations (1h)</td>
+                    <td className="no-check">-</td>
+                    <td className="no-check">-</td>
+                    <td className="check">✓</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div className="formulas-notes">
+                <p><strong>CONFIGURATION :</strong> Service ponctuel pour lancer votre présence LinkedIn professionnelle</p>
+                <p><strong>GESTION BASIQUE :</strong> PME voulant une présence régulière sans se ruiner</p>
+                <p><strong>GESTION COMPLÈTE :</strong> Gestion active multi-plateformes avec campagnes publicitaires</p>
+              </div>
+            </>
+          )}
         </div>
       </section>
 
-      <main className="main">
-        <section id="about">
-          <h2>About Us</h2>
-          <p>We are a modern HR consultancy helping you grow your business.</p>
-        </section>
-        <section id="services">
-          <h2>Our Services</h2>
-          <ul>
-            <li>Recruitment</li>
-            <li>Training</li>
-            <li>Consulting</li>
-          </ul>
-        </section>
-        <section id="contact">
-          <h2>Contact</h2>
-          <p>Email: contact@arlette-rh.com</p>
-        </section>
-      </main>
+      <section className="portfolio" id="portfolio">
+        <p className="title">Mes réalisations</p>
+
+        <div className="portfolio-videos-wrapper">
+          <div className="portfolio-video-container">
+            <iframe
+              width="100%"
+              height="450"
+              src="https://www.youtube.com/embed/tUDRS96wsaA"
+              title="Mes réalisations"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+
+          <div className="portfolio-video-container">
+            <iframe
+              width="100%"
+              height="450"
+              src="https://www.youtube.com/embed/4C04vCrwd2A"
+              title="L'attraction RH"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+
+          <div className="portfolio-video-container">
+            <img
+              src={require('./images/persona-consultant.png')}
+              alt="Persona Consultant TI"
+              className="portfolio-image"
+              onClick={() => openFullscreen(require('./images/persona-consultant.png'))}
+              style={{ cursor: 'pointer' }}
+            />
+          </div>
+
+          <div className="portfolio-video-container">
+            <img
+              src={require('./images/persona-pme.png')}
+              alt="Persona PME"
+              className="portfolio-image"
+              onClick={() => openFullscreen(require('./images/persona-pme.png'))}
+              style={{ cursor: 'pointer' }}
+            />
+          </div>
+        </div>
+
+        {fullscreenImage && (
+          <div className="fullscreen-overlay" onClick={closeFullscreen}>
+            <img src={fullscreenImage} alt="Fullscreen" className="fullscreen-image" />
+            <button className="fullscreen-close" onClick={closeFullscreen}>&times;</button>
+          </div>
+        )}
+      </section>
+
       <footer className="footer">
-        <p>&copy; 2025 Arlette RH. All rights reserved.</p>
+        <p>&copy; 2026 Arlette RH Solution. All rights reserved.</p>
       </footer>
     </div>
   );

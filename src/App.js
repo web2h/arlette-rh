@@ -127,7 +127,15 @@ function App() {
           <nav className={`nav nav-top${navOpen ? ' nav-open' : ''}`}>
             <a href="#about" onClick={() => setNavOpen(false)}>A propos</a>
             <a href="#services" onClick={() => setNavOpen(false)}>Mes services</a>
-            <a href="#portfolio" onClick={() => setNavOpen(false)}>Mes réalisations</a>
+            <div className="nav-item-with-submenu">
+              <a href="#portfolio" onClick={() => setNavOpen(false)}>Mes réalisations</a>
+              <div className="submenu">
+                <a href="#video-offres" onClick={() => setNavOpen(false)}>Offres d'emploi en vidéo</a>
+                <a href="#video-temoignages" onClick={() => setNavOpen(false)}>Témoignages d'intégration</a>
+                <a href="#portfolio-blogue" onClick={() => setNavOpen(false)}>Notre blogue</a>
+                <a href="#portfolio-personas" onClick={() => setNavOpen(false)}>Offres personnalisées</a>
+              </div>
+            </div>
             <a href="#contact" onClick={() => setNavOpen(false)}>Contact</a>
           </nav>
         </div>
@@ -996,7 +1004,11 @@ function App() {
         <p className="title">Mes réalisations</p>
 
         <div className="portfolio-videos-wrapper">
-          <div className="portfolio-video-container">
+          <div className="portfolio-video-container" id="video-offres">
+            <div className="portfolio-video-description">
+              <h3 className="portfolio-video-title">Offres d'emploi en vidéo</h3>
+              <p>Arlette RH Solutions crée des offres d'emploi captivantes en vidéo pour attirer vos talents et refléter votre culture d'entreprise</p>
+            </div>
             <iframe
               width="100%"
               height="450"
@@ -1008,7 +1020,11 @@ function App() {
             ></iframe>
           </div>
 
-          <div className="portfolio-video-container">
+          <div className="portfolio-video-container" id="video-temoignages">
+            <div className="portfolio-video-description">
+              <h3 className="portfolio-video-title">Témoignages d'intégration</h3>
+              <p>Découvrez comment Yannick et Amidou Florian, consultants TI internationaux, se sont intégrés à leur équipes de travail et au Québec. Leur histoire montre ce que vos talents recherchent vraiment.</p>
+            </div>
             <iframe
               width="100%"
               height="450"
@@ -1020,7 +1036,11 @@ function App() {
             ></iframe>
           </div>
 
-          <div className="portfolio-video-container">
+          <div className="portfolio-video-container" id="portfolio-blogue">
+            <div className="portfolio-video-description">
+              <h3 className="portfolio-video-title">Notre blogue</h3>
+              <p>Lire le témoignage complet de Yannick et Amidou Florian. Leur histoire pour guider les consultants TI internationaux dans leur intégration.</p>
+            </div>
             <img
               src={require('./images/blogue-1.jpg')}
               alt="Blogue 1"
@@ -1038,7 +1058,11 @@ function App() {
           </div>
 
 
-          <div className="portfolio-video-container">
+          <div className="portfolio-video-container" id="portfolio-personas">
+            <div className="portfolio-video-description">
+              <h3 className="portfolio-video-title">Offres personnalisées</h3>
+              <p>Nous créons des offres d'emploi sur mesure en développant des personas détaillés de vos futurs recrutements pour attirer les bons candidats.</p>
+            </div>
             <img
               src={require('./images/persona-francois-2.png')}
               alt="Persona François"
@@ -1046,9 +1070,6 @@ function App() {
               onClick={() => openFullscreen(require('./images/persona-francois-2.png'))}
               style={{ cursor: 'pointer' }}
             />
-          </div>
-
-          <div className="portfolio-video-container">
             <img
               src={require('./images/persona-vincent.png')}
               alt="Persona Vincent"
@@ -1089,7 +1110,7 @@ function App() {
             <b>Pour les PME québécoises</b>, nous créons un environnement de travail où votre marque employeur rayonne, où vos talents se sentent attirés et engagés. Nous optimisons votre présence RH digitale et développons les stratégies d'attraction qui font la différence.
           </p>
           <p>
-            <b>Pour les professionnels TI internationaux</b>, nous facilitons votre intégration dans les codes québécois, nous affinons votre profil professionnel et nous vous connectons aux opportunités qui correspondent à vos aspirations.
+            <b>Pour les professionnels TI internationaux et locaux</b>, nous facilitons votre intégration dans les codes québécois, nous affinons votre profil professionnel et nous vous connectons aux opportunités qui correspondent à vos aspirations.
           </p>
           <p>
             Remplissez ce formulaire et découvrez comment nous pouvons créer un environnement de travail paisible et productif pour votre organisation ou votre carrière. Je serais ravie d'échanger avec vous et de construire avec vous les solutions RH qui favorisent le bien-être et la performance de vos équipes.

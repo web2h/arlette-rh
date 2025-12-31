@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.3c7cad78.css",
-    "main.js": "/static/js/main.1c0cee1e.js",
+    "main.css": "/static/css/main.b054f782.css",
+    "main.js": "/static/js/main.8516d022.js",
     "static/js/453.8ec1e713.chunk.js": "/static/js/453.8ec1e713.chunk.js",
     "static/media/persona-vincent.png": "/static/media/persona-vincent.b959988d13d87aeb1bb4.png",
     "static/media/persona-francois-2.png": "/static/media/persona-francois-2.e136f213b4878394593f.png",
+    "static/media/partner-glos.png": "/static/media/partner-glos.e091778ec7ba9823d884.png",
     "static/media/blogue-2.jpg": "/static/media/blogue-2.e0a4e37c5b38bd0d0bff.jpg",
     "static/media/blogue-1.jpg": "/static/media/blogue-1.cd599d03c0309bf1d24b.jpg",
     "static/media/portrait.png": "/static/media/portrait.69af9957dde578c441b4.png",
@@ -18,12 +19,12 @@
     "static/media/mes-services-media.png": "/static/media/mes-services-media.f20e1a11571915478fd7.png",
     "static/media/kimia.png": "/static/media/kimia.9576f59d9b06cf73ce2e.png",
     "index.html": "/index.html",
-    "main.3c7cad78.css.map": "/static/css/main.3c7cad78.css.map",
-    "main.1c0cee1e.js.map": "/static/js/main.1c0cee1e.js.map",
+    "main.b054f782.css.map": "/static/css/main.b054f782.css.map",
+    "main.8516d022.js.map": "/static/js/main.8516d022.js.map",
     "453.8ec1e713.chunk.js.map": "/static/js/453.8ec1e713.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3c7cad78.css",
-    "static/js/main.1c0cee1e.js"
+    "static/css/main.b054f782.css",
+    "static/js/main.8516d022.js"
   ]
 }

@@ -1556,7 +1556,43 @@ html {
   font-size: 1.2rem;
   color: #888888;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+
+.linkedin-contact {
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #555555;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.25rem;
+}
+
+.linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #0077B5;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.linkedin-link:hover {
+  background-color: rgba(0, 119, 181, 0.1);
+  transform: translateY(-2px);
+}
+
+.linkedin-link svg {
+  transition: transform 0.3s ease;
+}
+
+.linkedin-link:hover svg {
+  transform: scale(1.1);
 }
 
 .contact-form {

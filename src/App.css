@@ -1174,11 +1174,14 @@ html {
   color: #fff;
   border: none;
   border-radius: 8px;
-  padding: 2rem 4rem;
+  padding: 2rem 0rem;
   font-size: 1.5rem;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s;
+  text-align: center;
+  text-decoration: none;
+  display: block;
 }
 
 .soumission-btn:hover,
@@ -1190,8 +1193,30 @@ html {
 .soumission-btn-fixed {
   position: absolute;
   right: 2.5rem;
+  bottom: 3.5rem;
+  z-index: 2;
+}
+
+.consultation-container {
+  position: absolute;
+  right: 2.5rem;
   bottom: 2.5rem;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+  width: 450px;
+}
+
+.consultation-description {
+  color: #333333;
+  font-size: 1rem;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+  word-wrap: break-word;
+  max-width: 100%;
 }
 
 .video-container {
@@ -1292,15 +1317,19 @@ html {
 @media (max-width: 600px) {
   .hamburger {
     display: flex;
-    margin-right: 2rem;
+    margin-right: 1rem;
+    margin-top: 80px;
   }
 
   .navigation {
     left: 0;
     right: 0;
     width: 100%;
-    justify-content: space-between;
-    padding: 0 1rem;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0 2rem;
+    gap: 0.5rem;
   }
 
   .nav-top {
@@ -1336,6 +1365,7 @@ html {
     position: static;
     width: 100px;
     z-index: 4;
+    order: -1;
   }
 
   .welcome-block {
@@ -1347,8 +1377,19 @@ html {
     color: #ffffff;
   }
 
-  .soumission-btn {
+  .consultation-description {
+    color: #ffffff;
+  }
+
+  .consultation-container {
     width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+  }
+
+  .soumission-btn {
+    width: 100%;
   }
 
   .soumission-btn-fixed {
@@ -1559,9 +1600,26 @@ html {
   margin-bottom: 2rem;
 }
 
+.social-contact-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  gap: 0;
+}
+
 .linkedin-contact {
   text-align: left;
-  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #555555;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.25rem;
+}
+
+.whatsapp-contact {
+  text-align: left;
   font-size: 1.1rem;
   color: #555555;
   display: flex;
@@ -1592,6 +1650,31 @@ html {
 }
 
 .linkedin-link:hover svg {
+  transform: scale(1.1);
+}
+
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #25D366;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.whatsapp-link:hover {
+  background-color: rgba(37, 211, 102, 0.1);
+  transform: translateY(-2px);
+}
+
+.whatsapp-link svg {
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-link:hover svg {
   transform: scale(1.1);
 }
 
